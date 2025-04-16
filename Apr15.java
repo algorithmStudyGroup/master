@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Apr15 {
+public class Apr15 { // 11650
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -29,5 +29,5 @@ public class Apr15 {
 }
 // 람다식을 이용하여 정렬하기
 // Arrays.sort(정렬할 배열, 정렬 기준)의 정렬 기준을 Comparator로 구현한다.
-// 
+// Comparator 인자 두 개를 받아서 인자1-인자2를 비교해 오름차순으로 두 인자를 정렬해 반환
 
