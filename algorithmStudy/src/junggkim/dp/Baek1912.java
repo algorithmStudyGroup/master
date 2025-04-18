@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Back1912 {
+public class Baek1912 {
 
     static int[] dp;
     static int[] list;

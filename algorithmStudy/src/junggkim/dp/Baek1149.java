@@ -1,15 +1,12 @@
 package junggkim.dp;
 
-import java.util.*;
-import java.io.*;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 // 1149번 RGB 거리
-public class Back1149 {
+public class Baek1149 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
