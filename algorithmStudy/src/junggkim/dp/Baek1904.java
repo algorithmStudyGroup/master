@@ -1,10 +1,9 @@
 package junggkim.dp;
 
-import java.io.*;
 import java.util.Scanner;
 
 //빠른 풀이--------------------------------------------------------------
-public class Back1904{
+public class Baek1904 {
     public static void main(String[] args) {
         int n=new Scanner(System.in).nextInt();
         int[]dp=new int[n+1];     // 이부분은 굿!!

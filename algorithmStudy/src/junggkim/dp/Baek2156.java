@@ -2,7 +2,7 @@ package junggkim.dp;
 
 import java.io.*;
 
-public class Back2156 {
+public class Baek2156 {
     static int[] podo;
     static int[] dp;
 

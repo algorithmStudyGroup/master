@@ -3,7 +3,7 @@ package junggkim.dp;
 import java.io.*;
 import java.util.*;
 
-public class Back1932 {
+public class Baek1932 {
     static int[] triangle = new int[500 * 500];;
     static int[] dp = new int[500 * 500];
 
