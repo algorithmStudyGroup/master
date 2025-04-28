@@ -1,38 +1,36 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
 
-public class Main {
+public class Main { //10844
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[] result = new int[n];
-        int max = 0;
-        for (int i = 0; i < n; i++) {
-            result[i] = Integer.parseInt(br.readLine());
-            if (result[i] > max) {
-                max = result[i];
+        int mod = 1000000000;
+        long[][] dp = new long[n + 1][10];
+        for (int i = 1; i < 10; i++) {
+            dp[1][i] = 1;
+        }
+        if (n > 1) {
+            for (int i = 2; i < n + 1; i++) {
+                for (int j = 0; j < 10; j++) {
+                    if (j == 0) {
+                        dp[i][0] = dp[i - 1][1] % mod;
+                    } else if (j == 9) {
+                        dp[i][9] = dp[i - 1][8] % mod;
+                    } else {
+                        dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j + 1]) % mod;
+                    }
+                }
             }
         }
-        int[] dp = new int[max + 6];
-        dp[0] = 0;
-        dp[1] = 1;
-        dp[2] = 2;
-        dp[3] = 4;
-        dp[4] = 7;
-        dp[5] = 13;
-        dp[6] = 24;
-        if (max > 6) {
-            for (int i = 7; i < 11; i++) {
-                dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
-            }
+        long count = 0;
+        for (int i = 0; i < 10; i++) {
+            count = (count + dp[n][i]) % mod;
         }
-        for (int i = 0; i < n; i++) {
-            System.out.println(dp[result[i]]);
-        }
+        System.out.println(count);
+
     }
 }
 // dp- bottom-up: dp[n]을 구하기 위해서는 dp[n-1]까지의 값이 다 나와야 한다.
 // n에서 가능한 모든 연산 과정을 수행하고 이 중에서 최소 연산 횟수를 출력
-//
