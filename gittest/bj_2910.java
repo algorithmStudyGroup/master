@@ -1,16 +1,11 @@
 package gittest;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.StringTokenizer;
+import java.util.*;
 
-public class bj_2751 {
+public class bj_2910 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -25,6 +20,14 @@ public class bj_2751 {
         for(int i = 0 ; i < n ; i++) {
             int num = Integer.parseInt(st.nextToken());
             qq.put(num, qq.getOrDefault(num, 0) + 1);
+        }
+        ArrayList<Integer> list1 = new ArrayList<>(qq.keySet());
+
+
+        for(int key : list1) {
+            for(int i = 0 ; i < qq.get(key) ; i++) {
+
+            }
         }
     }
 }
